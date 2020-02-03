@@ -43,19 +43,6 @@ stage('Jfrog Artifacory Upload') {
         
         }
      
-    stage('Jfrog Artifactory download'){
-    def server= Artifactory.server 'Artifactory'
-    def downloadSpec = """{
-    "files": [
-    {
-      "pattern": "petclinic/*.war",
-      "target": "/root/.jenkins/workspace/"
-      
-    }
-    ]
-    }"""
-    server.download(downloadSpec) 
-}
    stage('Docker-Stage-Deployment') {
    sh label: '', script: 'docker-compose up -d --build'
   }
