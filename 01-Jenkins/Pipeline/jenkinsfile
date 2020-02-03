@@ -4,10 +4,10 @@ node {
 
      
   stage('Git-Checkout') {
-   git 'https://github.com/Aaditigupta/ansible_terraform.git'
+   git 'https://github.com/Aaditigupta/appa.git'
   }
     
- def project_path="01-Jenkins/Code/petclinic"
+ def project_path="mindtree-devops-30Jan2020/01-Jenkins/Code/petclinic"
  
  dir(project_path) {
     
