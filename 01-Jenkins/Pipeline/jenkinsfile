@@ -40,7 +40,7 @@ stage('Jfrog Artifacory Upload') {
                         "target": "petclinic"}]
                     }"""
         server.upload(uploadSpec)
-        
+        }
         }
      
    stage('Docker-Stage-Deployment') {
